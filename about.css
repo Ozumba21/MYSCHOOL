@@ -1,0 +1,219 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+  /* padding: 0 30px; */
+  overflow: hidden;
+}
+
+.about_achievement {
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.about_achievement .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  padding: 0;
+  width: 100%;
+}
+
+.about_achievement-right > p {
+  margin: 1.6rem 0 2.5rem;
+}
+
+.achievement_cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.achievement_card {
+  background-color: var(--color-bg1);
+  height: fit-content;
+  padding: 1.6rem;
+  border-radius: 1rem;
+  text-align: center;
+  transition: var(--transition);
+}
+.achievement_card:hover {
+  background-color: var(--color-bg2);
+  box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+}
+.achievement_icon {
+  background-color: var(--color-danger);
+  padding: 0.6rem;
+  border-radius: 1rem;
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.achievement_card:nth-child(2) .achievement_icon {
+  background-color: var(--color-success);
+}
+.achievement_card:nth-child(3) .achievement_icon {
+  background-color: var(--color-primary);
+}
+.achievement_card p {
+  margin-top: 2rem;
+}
+
+/* team  */
+
+.team {
+  background-color: var(--color-bg1);
+  box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+.team h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.team .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+.team_member {
+  background-color: var(--color-bg2);
+  padding: 2rem;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.team_member:hover {
+  background-color: transparent;
+  border-color: var(--color-primary);
+}
+.team_member_img {
+  filter: saturate(0);
+}
+.team_member_img:hover {
+  filter: saturate(1);
+}
+.team_member_info * {
+  text-align: center;
+  margin-top: 1.6rem;
+}
+.team_member:hover .team_member_socials {
+  right: 0;
+}
+.team_member_socials {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-primary);
+  border-radius: 1rem 0 0 1rem;
+  box-shadow: -2rem 0 2rem rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.team_member_socials a {
+  padding: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 90%;
+  }
+  .about_achievement {
+    margin-top: 2rem;
+  }
+  .about_achievement .container {
+    grid-template-columns: 1fr;
+  }
+
+  /* team */
+  .team_container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  /* .achievement_cards:last-child{
+    grid-column: span 2;
+  } */
+  .team h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 96%;
+  }
+  .achievement_cards {
+    grid-template-columns: 1fr;
+  }
+  .about_achievement .container {
+    grid-template-columns: 1fr;
+  }
+  .team_member {
+    background-color: var(--color-bg2);
+    padding: 1rem 2rem 1rem 2rem;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    padding: 3rem;
+  }
+
+  .team .container {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    width: 100%;
+    text-align: center;
+    /* overflow-y: hidden; */
+    padding: 0;
+  }
+  .team h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  .team_member {
+    background-color: var(--color-bg2);
+    padding: 1rem 2rem 1rem 2rem;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    padding: 4rem;
+  }
+
+  .team .container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    width: 100%;
+    text-align: center;
+    /* overflow-y: hidden; */
+    padding: 0;
+  }
+  .footer_container {
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    gap: rem;
+  }
+}
